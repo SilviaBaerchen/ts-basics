@@ -69,3 +69,24 @@ function divide(a: number, b: number): number | string  { //in this case it is N
     return a / b;
 }
 
+function printOut(value: any) {
+    console.log(value) //this function never returns, sincethe type is not defined
+}
+
+// Generics
+
+function pushIntoTheArray<T>(array: T[], value:T) {
+    const newArray = [value, ...array];
+    return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = pushIntoTheArray(demoArray, -1); //output [-1, 1, 2, 3]
+const stringArray = pushIntoTheArray(["a", "b", "c"], "d")
+
+//Generics are flexible types
+// TS knows that it expects a value, and an array full of this same values
+// TS just has to check wheter the value has the same value
+//in the first example it is type number, in the second example it is string and both are allowed
+//because TS doesnt care as long as both have the same type 
