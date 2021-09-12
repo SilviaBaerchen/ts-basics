@@ -41,3 +41,20 @@ let student: string | number | boolean = "Angela";
 student = 1234;
 student = false;
 
+//type alias
+
+type Person = { //declare your own customized type (Beware of = vs :)
+    name: string,
+    age: number,
+    isBachelor: boolean,
+}
+
+let newStudent: Person; //use it for a var
+
+newStudent = { //example (Beware of = vs :)
+    name: "Anna",
+    age: 32,
+    isBachelor: true,
+}
+
+let newMasterClass: Person[]; //example of array of type person
