@@ -58,3 +58,14 @@ newStudent = { //example (Beware of = vs :)
 }
 
 let newMasterClass: Person[]; //example of array of type person
+
+// Functions & types
+
+function multiply(a: number, b: number): number  {// in this case it is redundant to specify the type of the result of the function, sice TS already assumes that two numbers give a number as result
+    return a * b;
+}
+
+function divide(a: number, b: number): number | string  { //in this case it is NOT redundant to specify the type(s) of the result
+    return a / b;
+}
+
