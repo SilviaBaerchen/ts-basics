@@ -31,3 +31,13 @@ let people : { // combine different types: array of objects declaration: I want 
 }[];
 
 
+// type inference
+let course = "React" //at var declaration TS knows already which kind of type to expect, even if not explicitly declared
+
+//course = 1234 ERROR!! IT ALREADY KNOWS TO EXPECT A STRING; NOT A NUMBER1
+
+//Union Types - allow to mix different data types. They must be explicitly declared and in this case this is not redundant! DUH! 
+let student: string | number | boolean = "Angela";
+student = 1234;
+student = false;
+
